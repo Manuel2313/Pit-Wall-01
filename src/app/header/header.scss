@@ -1,0 +1,27 @@
+ nav {
+  background-color: #eee1e1;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1{
+     margin: 0;
+     a{
+      text-decoration: none;
+      cursor: pointer;
+     }
+  }
+  button{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    &:hover {
+    background-color: #ddd;
+  }
+  }
+
+}
+ :host {
+    display: block;
+  }

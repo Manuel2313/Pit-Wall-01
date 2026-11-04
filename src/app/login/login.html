@@ -1,0 +1,20 @@
+ <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label>
+      Email
+      <input type="email" formControlName="email">
+      @if (loginForm.controls.email.touched && loginForm.controls.email.invalid) {
+        <small class="error">Email is required and must be valid</small>
+      }
+
+    </label>
+
+    <label>
+      Password
+      <input type="password" formControlName="password">
+      @if (loginForm.controls.password.touched && loginForm.controls.password.invalid) {
+        <small class="error">Password is required</small>
+      }
+    </label>
+
+    <button type="submit" [disabled]="loginForm.invalid">Ingresar</button>
+  </form>
