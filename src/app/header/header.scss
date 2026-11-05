@@ -1,27 +1,66 @@
- nav {
-  background-color: #eee1e1;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  h1{
-     margin: 0;
-     a{
-      text-decoration: none;
-      cursor: pointer;
-     }
-  }
-  button{
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    &:hover {
-    background-color: rgb(10, 14, 233);
-  }
+:host {
+    display: block;
   }
 
-}
- :host {
-    display: block;
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(15, 15, 20, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--pw-border);
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+    }
+
+    &__brand {
+      font-family: var(--pw-font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pw-text);
+      text-decoration: none;
+      transition: color 0.15s ease;
+
+      &:hover {
+        color: var(--pw-primary);
+      }
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &__greeting {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      line-height: 1.1;
+    }
+
+    &__greeting-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--pw-primary);
+    }
+
+    &__greeting-email {
+      font-size: 0.9rem;
+      color: var(--pw-text);
+      font-weight: 500;
+      margin-top: 0.1rem;
+    }
   }

@@ -1,20 +1,41 @@
- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <label>
-      Email
-      <input type="email" formControlName="email">
-      @if (loginForm.controls.email.touched && loginForm.controls.email.invalid) {
-        <small class="error">Email is required and must be valid</small>
-      }
+<section class="auth-page">
+    <div class="auth-card">
+      <h1 class="auth-card__title">Ingresá a Pit Wall</h1>
+      <p class="auth-card__subtitle">Accedé a tu biblioteca de setups</p>
 
-    </label>
+      <form class="auth-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="auth-form__field">
+          <label for="email" class="auth-form__label">Email</label>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            class="auth-form__input"
+            placeholder="tu@email.com">
+          @if (loginForm.controls.email.touched && loginForm.controls.email.invalid) {
+            <small class="auth-form__error">Email requerido y con formato válido</small>
+          }
+        </div>
 
-    <label>
-      Password
-      <input type="password" formControlName="password">
-      @if (loginForm.controls.password.touched && loginForm.controls.password.invalid) {
-        <small class="error">Password is required</small>
-      }
-    </label>
+        <div class="auth-form__field">
+          <label for="password" class="auth-form__label">Password</label>
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            class="auth-form__input"
+            placeholder="••••••••">
+          @if (loginForm.controls.password.touched && loginForm.controls.password.invalid) {
+            <small class="auth-form__error">Password requerido (mín. 6 caracteres)</small>
+          }
+        </div>
 
-    <button type="submit" [disabled]="loginForm.invalid">Ingresar</button>
-  </form>
+        <button
+          type="submit"
+          [disabled]="loginForm.invalid"
+          class="btn btn-primary btn-lg w-100">
+          Ingresar
+        </button>
+      </form>
+    </div>
+  </section>
