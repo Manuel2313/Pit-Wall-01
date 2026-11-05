@@ -46,3 +46,7 @@ Thumbs.db
  # Local tooling caches — nunca a git
   .atl/
   .claude/
+
+   # Local-only AI agent contract (contains personal paths)
+  CLAUDE.md
+  PROGRESS.md
