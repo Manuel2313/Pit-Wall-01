@@ -43,10 +43,12 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 
- # Local tooling caches — nunca a git
-  .atl/
-  .claude/
+# Local tooling caches — nunca a git
+.atl/
+.claude/
 
-   # Local-only AI agent contract (contains personal paths)
-  CLAUDE.md
-  PROGRESS.md
+# Local-only AI agent contract (contains personal paths)
+CLAUDE.md
+
+# Local-only learning journal
+PROGRESS.md
